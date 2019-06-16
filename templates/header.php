@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Simple Database App</title>
+    <title>Luxury Beach Hotel</title>
 
     <link rel="stylesheet" href="css/style.css" />
   </head>

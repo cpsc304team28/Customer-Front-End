@@ -1,3 +1,5 @@
+<!-- Homepage with links to each option -->
+
 <?php include "templates/header.php"; ?>
 
 <div>
@@ -15,12 +17,12 @@
     <li>
       <img src="https://image.flaticon.com/icons/svg/1665/1665753.svg">
       <h3><a href="update.php"><strong>Update</strong></a></h3>
-       <p>Edit a Customer</p>
+      <p>Edit a Customer</p>
       </li>
     <li>
       <img src="https://image.flaticon.com/icons/svg/1831/1831192.svg" >
       <h3><a href="delete.php"><strong>Delete</strong></a></h3>
-       <p>Delete a Customer</p>
+      <p>Delete a Customer</p>
     </li>
   </ul>
 </div>
