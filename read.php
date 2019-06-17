@@ -59,8 +59,8 @@ if (isset($_POST['submit'])) {
               <td><?php echo escape($row["Email"]); ?></td>
               <td><?php echo escape($row["Address"]); ?></td>
               <td><?php echo escape($row["CreditCard"]); ?></td>
-              <td><?php echo escape($row["noOfAdults"]); ?> </td>
-              <td><?php echo escape($row["noOfChildren"]); ?> </td>
+              <td><?php echo escape($row["NoOfAdults"]); ?> </td>
+              <td><?php echo escape($row["NoOfChildren"]); ?> </td>
             </tr>
           <?php } ?>
         </tbody>
