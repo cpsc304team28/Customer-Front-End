@@ -5,24 +5,24 @@
 <div>
   <ul>
     <li>
-      <img src="https://image.flaticon.com/icons/svg/1665/1665731.svg">
-      <h3> <a href="create.php"><strong>Create</strong></a> </h3>
-       <p>Add a Customer</p>
+      <img src="https://image.flaticon.com/icons/svg/1665/1665746.svg">
+      <h3> <a href="indexEmployee.php"><strong>Manage Employees</strong></a> </h3>
+       <p>View Employees, Salaries, Maintenance Records, Housekeeping and Maintenance, Lifeguard Schedule, Instructor Schedule,</p>
     </li>
     <li>
       <img src="https://image.flaticon.com/icons/svg/1665/1665746.svg" >
-      <h3>      <a href="read.php"><strong>Read</strong></a> </h3>
-      <p>Find a Customer</p>
+      <h3>      <a href="indexCustomer.php"><strong>Customer Management</strong></a> </h3>
+      <p>View Customers, Emergency Contacts, Equipment Rented, Transportation Tickets Bought, and Reservations</p>
     </li>
     <li>
-      <img src="https://image.flaticon.com/icons/svg/1665/1665753.svg">
-      <h3><a href="update.php"><strong>Update</strong></a></h3>
-      <p>Edit a Customer</p>
+      <img src="https://image.flaticon.com/icons/svg/1665/1665746.svg">
+      <h3><a href="indexTransport.php"><strong>Transportation</strong></a></h3>
+      <p>View Transportation Schedules, and Vehicles</p>
       </li>
     <li>
-      <img src="https://image.flaticon.com/icons/svg/1831/1831192.svg" >
-      <h3><a href="delete.php"><strong>Delete</strong></a></h3>
-      <p>Delete a Customer</p>
+      <img src="https://image.flaticon.com/icons/svg/1665/1665746.svg" >
+      <h3><a href="indexHotel.php"><strong>Hotel Amenities</strong></a></h3>
+      <p>View Rooms, Equipment, and Facilities</p>
     </li>
   </ul>
 </div>

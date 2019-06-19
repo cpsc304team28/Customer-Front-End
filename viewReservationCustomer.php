@@ -13,14 +13,14 @@ if (isset($_POST['submit'])) {
 
     $connection = new PDO($dsn, $username, $password, $options);
 
-    $sql = "SELECT *
-    FROM Customer
-    WHERE CustomerID = :CustomerID";
+    $sql = "SELECT ReservationNo, RoomNo, CheckInDate, CheckOutDate
+    FROM Reservation_Makes
+    WHERE CustomerID in (SELECT CustomerID FROM Customer WHERE phoneno = :phoneno)";
 
-    $CustomerID = $_POST['CustomerID'];
+    $phoneno = $_POST['phoneno'];
 
     $statement = $connection->prepare($sql);
-    $statement->bindParam(':CustomerID', $CustomerID, PDO::PARAM_STR);
+    $statement->bindParam(':phoneno', $phoneno, PDO::PARAM_STR);
     $statement->execute();
 
     $result = $statement->fetchAll();
@@ -40,27 +40,19 @@ if (isset($_POST['submit'])) {
       <table class="blueTable">
         <thead>
           <tr>
-            <th>ID #</th>
-            <th>Name</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Credit Card</th>
-            <th>Adults</th>
-            <th>Children</th>
+            <th>Reservation #</th>
+            <th>Room #</th>
+            <th>Cheeck-in</th>
+            <th>Check-out</th>
           </tr>
         </thead>
         <tbody>
           <?php foreach ($result as $row) { ?>
             <tr>
-              <td><?php echo escape($row["CustomerID"]); ?></td>
-              <td><?php echo escape($row["Name"]); ?></td>
-              <td><?php echo escape($row["PhoneNo"]); ?></td>
-              <td><?php echo escape($row["Email"]); ?></td>
-              <td><?php echo escape($row["Address"]); ?></td>
-              <td><?php echo escape($row["CreditCard"]); ?></td>
-              <td><?php echo escape($row["noOfAdults"]); ?> </td>
-              <td><?php echo escape($row["noOfChildren"]); ?> </td>
+              <td><?php echo escape($row["ReservationNo"]); ?></td>
+              <td><?php echo escape($row["RoomNo"]); ?></td>
+              <td><?php echo escape($row["CheckInDate"]); ?></td>
+              <td><?php echo escape($row["CheckOutDate"]); ?></td>
             </tr>
           <?php } ?>
         </tbody>
@@ -71,13 +63,12 @@ if (isset($_POST['submit'])) {
   } ?>
 
   <!-- Form to enter customer information; submit calls SQL method up top -->
-  <h2 style="color:white;">View Account</h2>
+  <h2 style="color:white;">View Reservation</h2>
   <form method="post">
-    <label for="CustomerID">Enter your unique customer ID:</label>
-    <input type="text" id="CustomerID" name="CustomerID">
+    <label for="phoneno">Enter your phone number:</label>
+    <input type="text" id="phoneno" name="phoneno">
     <input type="submit" name="submit" value="View Results">
   </form>
 
-  <a href="index.php">Back to home</a>
+  <a href="indexCustomerView.php">Back to home</a>
 
-<?php include "templates/footer.php"; ?>

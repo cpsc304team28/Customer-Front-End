@@ -6,11 +6,11 @@
   */
 
 $host       = "localhost";
-$port       = "8080";
+//$port       = "8080";
 $username   = "root";
 $password   = "root";
-$dbname     = "test"; // will use later
-$dsn        = "mysql:host=$host;port=$port;dbname=$dbname"; // will use later
+$dbname     = "hotel"; // will use later
+$dsn        = "mysql:host=$host;dbname=$dbname"; // will use later
 $options    = array(
                 PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
               );
